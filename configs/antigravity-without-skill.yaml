@@ -1,7 +1,7 @@
 job_name: antigravity-without-skill
 agents:
-  - name: antigravity-sdk
-    model_name: gemini-2.5-flash
+  - name: gemini-cli
+    model_name: gemini/gemini-2.5-flash
     skills: []
 tasks:
   - path: datasets/antigravity-skill-poc/task-001

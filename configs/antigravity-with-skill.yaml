@@ -1,7 +1,7 @@
 job_name: antigravity-with-skill
 agents:
-  - name: antigravity-sdk
-    model_name: gemini-2.5-flash
+  - name: gemini-cli
+    model_name: gemini/gemini-2.5-flash
     skills:
       - skills/distinctive-output
 tasks:

@@ -1,0 +1,8 @@
+job_name: antigravity-with-skill
+agents:
+  - name: antigravity-sdk
+    model_name: gemini-2.5-flash
+    skills:
+      - skills/distinctive-output
+tasks:
+  - path: datasets/antigravity-skill-poc/task-001

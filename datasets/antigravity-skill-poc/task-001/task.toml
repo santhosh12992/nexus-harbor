@@ -1,0 +1,24 @@
+schema_version = "1.4"
+
+[task]
+name = "nexus-harbor/antigravity-skill-poc-001"
+version = "1.0.0"
+description = "Minimal benchmark task for evaluating Google Antigravity custom skill behavior in Harbor"
+authors = [{ name = "nexus" }]
+keywords = ["poc", "antigravity", "skill", "evaluation"]
+
+[environment]
+os = "linux"
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+
+[agent]
+timeout_sec = 180.0
+
+[verifier]
+timeout_sec = 60.0
+
+[metadata]
+category = "evaluation"
+difficulty_explanation = "Deterministic text summary task designed for A/B skill evaluation"

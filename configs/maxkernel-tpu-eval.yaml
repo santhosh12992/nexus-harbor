@@ -1,0 +1,13 @@
+job_name: maxkernel-tpu-eval
+agents:
+  - name: gemini-cli
+    model_name: gemini/gemini-pro-latest
+    skills:
+      - skills/maxkernel
+    env:
+      TPU_NAME: maxkernel-v6e-1
+      TPU_ZONE: asia-northeast1-b
+      TPU_PROJECT: tpu-prod-env-multipod
+      USE_REAL_TPU: "1"
+tasks:
+  - path: datasets/tpu-kernel-speedup/task-001

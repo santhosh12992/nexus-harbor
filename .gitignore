@@ -1,0 +1,8 @@
+.venv/
+.env
+jobs/
+*.tar.gz
+agent_trajectory.txt
+__pycache__/
+*.pyc
+.DS_Store

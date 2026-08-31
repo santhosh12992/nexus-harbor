@@ -1,0 +1,24 @@
+version = "1.4"
+
+[metadata]
+name = "tpu-kernel-speedup-swiglu-v6e"
+description = "Iterative Pallas/JAX TPU kernel optimization for Fused SwiGLU."
+author = "smuralik"
+tags = ["nexus", "tpu", "xprof", "jax", "pallas", "swiglu", "iterative"]
+benchmark_version = "2.0.0"
+
+[environment]
+image = "gcr.io/google.com/cloud-tpu/jax-community:latest"
+timeout_sec = 600
+cpus = 2
+memory_mb = 16384
+gpus = 0
+
+[verifier]
+timeout_sec = 300
+
+artifacts = [
+  "/workspace/optimized_kernel.py",
+  "/workspace/baseline_kernel.py",
+  "/workspace/profiler_history.json",
+]

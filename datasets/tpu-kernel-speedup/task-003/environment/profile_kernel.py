@@ -100,11 +100,10 @@ def main():
     Wu = jax.random.normal(k3, (Din, Dout), dtype=jnp.float32)
 
     # Warmup
-    n_warmup = 1 if backend == "cpu" else 5
-    for _ in range(n_warmup):
+    for _ in range(5):
         _ = opt_mod.run_kernel(X, Wg, Wu).block_until_ready()
 
-    n_iters = 3 if backend == "cpu" else 25
+    n_iters = 25
     if backend == "cpu":
         t0_b = time.perf_counter()
         for i in range(n_iters):

@@ -1,0 +1,9 @@
+{
+  "iteration": 0,
+  "max_iterations": 5,
+  "atol": 0.01,
+  "rtol": 0.01,
+  "best_code_path": "workspace/base.py",
+  "best_optimized_time": "Infinity",
+  "history": []
+}

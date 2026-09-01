@@ -1,0 +1,90 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties": false,
+   "properties": {
+      "base_kernel_artifact": {
+         "additionalProperties": false,
+         "properties": {
+            "file": {
+               "type": "string"
+            },
+            "media_type": {
+               "type": "string"
+            },
+            "run_id": {
+               "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{12}$",
+               "type": "string"
+            },
+            "schema": {
+               "type": "string"
+            },
+            "sha256": {
+               "pattern": "^[a-f0-9]{64}$",
+               "type": "string"
+            },
+            "size_bytes": {
+               "minimum": 0,
+               "type": "integer"
+            }
+         },
+         "required": [
+            "file",
+            "media_type",
+            "run_id",
+            "schema",
+            "sha256",
+            "size_bytes"
+         ],
+         "type": "object"
+      },
+      "iteration": {
+         "minimum": 1,
+         "type": "integer"
+      },
+      "previous_profile_artifact": {
+         "additionalProperties": false,
+         "properties": {
+            "file": {
+               "type": "string"
+            },
+            "media_type": {
+               "type": "string"
+            },
+            "run_id": {
+               "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{12}$",
+               "type": "string"
+            },
+            "schema": {
+               "type": "string"
+            },
+            "sha256": {
+               "pattern": "^[a-f0-9]{64}$",
+               "type": "string"
+            },
+            "size_bytes": {
+               "minimum": 0,
+               "type": "integer"
+            }
+         },
+         "required": [
+            "file",
+            "media_type",
+            "run_id",
+            "schema",
+            "sha256",
+            "size_bytes"
+         ],
+         "type": "object"
+      },
+      "run_id": {
+         "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{12}$",
+         "type": "string"
+      }
+   },
+   "required": [
+      "base_kernel_artifact",
+      "iteration",
+      "run_id"
+   ],
+   "type": "object"
+}

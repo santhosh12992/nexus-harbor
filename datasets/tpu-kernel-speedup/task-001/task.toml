@@ -10,7 +10,7 @@ benchmark_version = "2.0.0"
 [environment]
 image = "gcr.io/google.com/cloud-tpu/jax-community:latest"
 timeout_sec = 600
-cpus = 4
+cpus = 2
 memory_mb = 16384
 gpus = 0
 

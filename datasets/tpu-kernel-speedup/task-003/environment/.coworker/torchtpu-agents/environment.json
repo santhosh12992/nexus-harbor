@@ -1,0 +1,5 @@
+{
+   "remote_host" : "local-tpu-vm",
+   "revision" : 1,
+   "ssh_user" : "user"
+}

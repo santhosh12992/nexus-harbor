@@ -1,0 +1,10 @@
+{
+   "compatibility_target" : "antigravity-1.0",
+   "framework_version" : "0.0.1",
+   "generated" : true,
+   "harness" : "antigravity",
+   "include_internal" : false,
+   "source" : "torchtpu-agents",
+   "source_version" : "1.0.0",
+   "version_range" : ">=1.0.0,<2.0.0"
+}

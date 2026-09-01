@@ -1,26 +1,15 @@
 # TPU Kernel Optimization Task: Fused RMSNorm on TPU v6e
 
 ## Objective
-Optimize the reference RMSNorm (Root Mean Square Layer Normalization) kernel provided in `baseline_kernel.py`.
-Your solution must be written to `optimized_kernel.py` and implement the `run_kernel(X, W, eps)` function.
+Optimize the reference Root Mean Square Normalization (RMSNorm) kernel provided in `workspace/base.py` (and `baseline_kernel.py`).
+Your solution must implement the `run_kernel(X, W, eps)` function.
 
-## Mathematical Formulation
-$$\text{RMSNorm}(X, W) = \frac{X}{\sqrt{\frac{1}{D} \sum_{i=1}^D X_i^2 + \epsilon}} \odot W$$
-where $X \in \mathbb{R}^{B \times S \times D}$ is the input activation tensor, $W \in \mathbb{R}^D$ is the learnable weight vector, and $\epsilon=10^{-6}$.
-
-## Mandatory Requirement
-You MUST create and write your solution to `/workspace/optimized_kernel.py` and run `python3 /workspace/profile_kernel.py` to evaluate performance. Do NOT stop until `/workspace/optimized_kernel.py` is written and verified.
-
-## Multi-Iteration Self-Refinement Protocol
-You have access to a hardware profiling feedback tool: `python3 /workspace/profile_kernel.py`.
-
-You MUST use an iterative optimization loop:
-1. **Initial Implementation**: Write a baseline kernel to `optimized_kernel.py` and run `python3 /workspace/profile_kernel.py` to inspect initial execution latency and accuracy.
+## Multi-Iteration Self-Refinement Workflow
+You are equipped with the `tpu-coworker` / `maxkernel-loop` optimization package.
+Execute the iterative self-refinement optimization loop:
+1. **Initial Pallas Implementation**: Create an initial Pallas fused RMSNorm kernel fusing row-wise reduction, normalization, and elementwise weight multiplication into a single VMU pipeline.
 2. **Iterative Refinement**:
-   - Inspect the latency and speedup returned by `profile_kernel.py`.
-   - Edit `optimized_kernel.py` to fuse variance reduction with normalization, optimize row-wise block tiling (e.g. 128 rows per tile), and reduce memory roundtrips.
-   - Run `python3 /workspace/profile_kernel.py` again to evaluate the performance delta across iterations.
-3. **Target Constraints**:
-   - **Mathematical Accuracy**: Maximum absolute difference <= 1e-2 against `baseline_kernel.py`.
-   - **Speedup Target**: Achieve at least 1.5x hardware speedup.
-4. **Conclusion**: When you have verified your final speedup with `python3 /workspace/profile_kernel.py`, conclude your response by printing 'Optimization complete. Final kernel is written to optimized_kernel.py' and stop making further tool calls.
+   - Run compilation and hardware profiling feedback via `python3 /workspace/profile_kernel.py` (or `maxkernel/scripts/tpu_client.py`).
+   - Tune row chunk sizes, vector reductions, and register reuse to minimize HBM round-trips.
+   - Achieve at least 1.5x hardware speedup with <= 1e-2 maximum absolute difference against `baseline_kernel.py`.
+3. **Conclusion**: Save your best optimized kernel to `/workspace/optimized_kernel.py` (or `workspace/state.json`) and conclude with 'Optimization complete. Final kernel is written to optimized_kernel.py'.

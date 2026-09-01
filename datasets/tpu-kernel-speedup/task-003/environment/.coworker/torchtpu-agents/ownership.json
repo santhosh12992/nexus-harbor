@@ -1,0 +1,225 @@
+{
+   "actions" : [
+      {
+         "kind" : "file",
+         "path" : ".agent/skills/tpu-coworker/SKILL.md",
+         "sha256" : "660a4e921ee0b55bbec9e5f9b9ac18f167559afb890d075f17c4ecbeffff7081"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/fix-test-script.md",
+         "sha256" : "4d20a7f890a80d04d10aba247b0141b4e239e1db2e01aa4f14c3d93306ed60bb"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/fix-kernel-compilation.md",
+         "sha256" : "9ca7d172ff45a8cbd91b427f1786b33904e9c37c06739cb2e8f9951c3e44ef4b"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/implement-kernel.md",
+         "sha256" : "c009fb2da022c0614ce24830648312206fd9cd5bb1732d6f4166b536203976d1"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/summarize-test-results.md",
+         "sha256" : "dd13aaa29a025a0c4c3c443f1732eec86609eacc6425f3c431e4c4df37e3a372"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/torch-coder.md",
+         "sha256" : "07983fe678a8c4851c79e8bd249bdfa3856e5cc78141c34a54b3f59d8c6e4f21"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/generate-profile-script.md",
+         "sha256" : "faebb308ea06a1b1a85535c0c231c763b83261cbed1c79c237c185a5fd7bef2c"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/compilation-summary.md",
+         "sha256" : "1aaa9309b762ac0cefe92d3774243e73e6b9723e94b9495d6abb376bfab326dd"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/worker.md",
+         "sha256" : "534d720d1cac214c5d5891093fc45e19e1ab485c5678c94996b439c3225fbc96"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/plan-kernel.md",
+         "sha256" : "78cca73dec32a1ddeeeb922652c300318686e60ad4c247da0a2f2a0930032ee1"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/autotune-planner.md",
+         "sha256" : "fd55f629773bad205f867b365ec9742e4d31b1108ed3409be9a048d1ebc0a1a1"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/generate-test-file.md",
+         "sha256" : "7dcb617f215046cdf79b1f95996954dbba16054a377919df64a0e0bbd3dcd115"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/torch-inference-coder.md",
+         "sha256" : "f2392b9b6b508d21e2fe7c1b140c9d105d3e20156495f127f947542a2f2cb84e"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/torch-tpu-migration-orchestrator.md",
+         "sha256" : "32f66baecf41d8fa2a7c398158b515af6ecea8f60c2464a40beecb1c612f4e81"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/remote-tpu-runner.md",
+         "sha256" : "54c257b1ddee93242866af045c81948133c24e5fdb128da9ab922d9d4e1c92cd"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/summarize-profile.md",
+         "sha256" : "e00e6fea4a88a27e54f748c632c439cf7ed48132a9ce435deaf8eec02d5729a6"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/preflight-check.md",
+         "sha256" : "3df8fa44c12aaa465006856fae076f736045b31c1d919897c7d241e77392af3e"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/smart-hf-search.md",
+         "sha256" : "4fcd758eaaa43c53a5b0dcf0a400eda9868f5e7cf132d25108ac26cd62ed3513"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/autotune-summary.md",
+         "sha256" : "025116c75031049aff185686ff257d40ad261104903fe2f4963afbd9aea1c273"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/torch-tpu-inference.md",
+         "sha256" : "68ccf6037126a4d0cbae372fa1089e79fd762ab67b04a4a446fa8a237f0f0c9b"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/test-script-validation-summary.md",
+         "sha256" : "dca8a95f24a9eaae2164896b7137db2a069182e2df0db6c843854ca77b4489ef"
+      },
+      {
+         "kind" : "file",
+         "path" : ".agent/agents/maxkernel-loop.md",
+         "sha256" : "dba2b44fc17aeae1f2c665a063a82da5de66ae9cb1a13a929de74d879ee091fa"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/runtime/runtime.py",
+         "sha256" : "11374a3a14ba35835218f602567a5575a7067a52b31a26e41ebe3754cdd0c8c6"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/runtime/utils.py",
+         "sha256" : "e30d29a1e366105fb526d92172f86b5e70ad1626bb813ed1b39aac09c76bd609"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/test-request.json",
+         "sha256" : "d9c7a6f0c03ccdebcf2bc63b8c37d82a2fe479445394be6de325f61928d98dfc"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/test-result.json",
+         "sha256" : "26b7b98b08d17857227e1d5ac3f8f7bc29bdf3ad40fada5979eb658cdd31fca4"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/autotune-request.json",
+         "sha256" : "d9c7a6f0c03ccdebcf2bc63b8c37d82a2fe479445394be6de325f61928d98dfc"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/plan-request.json",
+         "sha256" : "834d27fb55f10425f7228e1039c7785daee289f6187df1739a051c802c8e59b2"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/profile-result.json",
+         "sha256" : "6e76e5d3bf6fcc2bf9f5d9f815f8c39b613d1877022e94aa14686bc3b033e50b"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/task-result.json",
+         "sha256" : "be0b924a991ad5738734f2e80c1247739036eeeaba9e36e8003ab5a99d97f202"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/autotune-result.json",
+         "sha256" : "ea992d1046cc53949ed612c6586737f2e76fe9d91ab24fdfb85f774323e4f561"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/worker-request.json",
+         "sha256" : "aa93cc09112ab1d250dda72aaf8a3fd0d0ca9fbf05b761ab18b72f70a5fd6802"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/task-request.json",
+         "sha256" : "cb2c41970554eb3536e196fa20eb9745c66e960316700112802e040e6ff6825d"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/plan-result.json",
+         "sha256" : "ccd7893bcbf7e05a8cb65d16c1b84d8268b7e304600363a4adc9cd3253e1eb5d"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/result-envelope.json",
+         "sha256" : "32fbd79b4b9b92b0409affb48526c8c563377f7a02b3d75de9d2fb763439932b"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/implement-result.json",
+         "sha256" : "ea6ca3befa7a91eff8ddf7b868326f89a80a1233e5641b5cd1c29f6b881cda69"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/profile-request.json",
+         "sha256" : "d9c7a6f0c03ccdebcf2bc63b8c37d82a2fe479445394be6de325f61928d98dfc"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/environment.json",
+         "sha256" : "90e83d4ba55c51c1bcb7e8ee9e76c5e19783c68a8fd249af288a667acbaeab8e"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/implement-request.json",
+         "sha256" : "5efe365d8822c33e6e166c4b2a98a8b3b5e07d82fdbff888c24c208970f2a175"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/worker-result.json",
+         "sha256" : "52afabb8ad54194effcb0a7cb0a6d8d33c65eaa311597e0b2dd3275812efc29a"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/schemas/artifact.json",
+         "sha256" : "eb61abc5051d337c55953063d05c31263344b01583dc5b18f9387ff77652eb81"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/coworker-build.json",
+         "sha256" : "03f0188abf1c466d385834cb0887218a72afc8f1ee66960f22f691f315d3bad0"
+      },
+      {
+         "kind" : "file",
+         "path" : ".coworker/torchtpu-agents/environment.json",
+         "sha256" : "545166da2893ffd5b16ccc15929e6c0c13baefc18f4298024e27e2648ce1952a"
+      }
+   ],
+   "compatibility_target" : "antigravity-1.0",
+   "framework_version" : "0.0.1",
+   "harness" : "antigravity",
+   "package" : "torchtpu-agents",
+   "scope" : "local",
+   "version" : "1.0.0"
+}

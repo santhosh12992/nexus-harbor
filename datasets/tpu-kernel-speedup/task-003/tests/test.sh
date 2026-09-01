@@ -9,7 +9,25 @@ LOGS_DIR="${LOGS_DIR:-/logs/verifier}"
 mkdir -p "$LOGS_DIR"
 echo "0" > "${LOGS_DIR}/reward.txt"
 
-# If agent didn't produce the kernel, finish cleanly with score 0
+# Locate the best optimized kernel produced by MaxKernel multi-agent workflow
+if [ ! -f "${WORKSPACE_DIR}/optimized_kernel.py" ]; then
+  if [ -f "${WORKSPACE_DIR}/state.json" ]; then
+    BEST_PATH=$(python3 -c "import json; s=json.load(open('${WORKSPACE_DIR}/state.json')); print(s.get('best_code_path', ''))" 2>/dev/null || true)
+    if [ -n "$BEST_PATH" ] && [ -f "$BEST_PATH" ]; then
+      cp "$BEST_PATH" "${WORKSPACE_DIR}/optimized_kernel.py"
+    elif [ -n "$BEST_PATH" ] && [ -f "${WORKSPACE_DIR}/${BEST_PATH}" ]; then
+      cp "${WORKSPACE_DIR}/${BEST_PATH}" "${WORKSPACE_DIR}/optimized_kernel.py"
+    fi
+  fi
+  if [ ! -f "${WORKSPACE_DIR}/optimized_kernel.py" ]; then
+    LATEST_ITER=$(find "${WORKSPACE_DIR}" -name "optimized.py" -o -name "optimized_kernel.py" 2>/dev/null | sort | tail -n 1)
+    if [ -n "$LATEST_ITER" ] && [ -f "$LATEST_ITER" ]; then
+      cp "$LATEST_ITER" "${WORKSPACE_DIR}/optimized_kernel.py"
+    fi
+  fi
+fi
+
+# If agent didn't produce any optimized kernel, finish cleanly with score 0
 if [ ! -f "${WORKSPACE_DIR}/optimized_kernel.py" ]; then
   echo "FAIL: Expected optimized kernel file missing"
   exit 0
@@ -36,9 +54,12 @@ fi
 
 # Export all artifacts to /logs/artifacts for Harbor UI Artifacts Tab display
 mkdir -p /logs/artifacts
+cp -r "${WORKSPACE_DIR}"/iter* /logs/artifacts/ 2>/dev/null || true
+cp "${WORKSPACE_DIR}/state.json" /logs/artifacts/ 2>/dev/null || true
 cp "${WORKSPACE_DIR}"/iteration_*_kernel.py /logs/artifacts/ 2>/dev/null || true
 cp "${WORKSPACE_DIR}/optimized_kernel.py" /logs/artifacts/ 2>/dev/null || true
 cp "${WORKSPACE_DIR}/baseline_kernel.py" /logs/artifacts/ 2>/dev/null || true
+cp "${WORKSPACE_DIR}/base.py" /logs/artifacts/ 2>/dev/null || true
 cp "${WORKSPACE_DIR}/profiler_history.json" /logs/artifacts/ 2>/dev/null || true
 cp "${SCRIPT_DIR}/../instruction.md" /logs/artifacts/ 2>/dev/null || true
 cp "${LOGS_DIR}/xprof_telemetry.json" /logs/artifacts/ 2>/dev/null || true

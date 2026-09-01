@@ -1,0 +1,25 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties": false,
+   "properties": {
+      "correct": {
+         "type": "boolean"
+      },
+      "error_message": {
+         "type": "string"
+      },
+      "latency_ms": {
+         "type": "number"
+      },
+      "run_id": {
+         "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{12}$",
+         "type": "string"
+      }
+   },
+   "required": [
+      "correct",
+      "latency_ms",
+      "run_id"
+   ],
+   "type": "object"
+}

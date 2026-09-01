@@ -1,0 +1,54 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "additionalProperties": false,
+   "properties": {
+      "best_config_artifact": {
+         "additionalProperties": false,
+         "properties": {
+            "file": {
+               "type": "string"
+            },
+            "media_type": {
+               "type": "string"
+            },
+            "run_id": {
+               "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{12}$",
+               "type": "string"
+            },
+            "schema": {
+               "type": "string"
+            },
+            "sha256": {
+               "pattern": "^[a-f0-9]{64}$",
+               "type": "string"
+            },
+            "size_bytes": {
+               "minimum": 0,
+               "type": "integer"
+            }
+         },
+         "required": [
+            "file",
+            "media_type",
+            "run_id",
+            "schema",
+            "sha256",
+            "size_bytes"
+         ],
+         "type": "object"
+      },
+      "best_latency_ms": {
+         "type": "number"
+      },
+      "run_id": {
+         "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{12}$",
+         "type": "string"
+      }
+   },
+   "required": [
+      "best_config_artifact",
+      "best_latency_ms",
+      "run_id"
+   ],
+   "type": "object"
+}

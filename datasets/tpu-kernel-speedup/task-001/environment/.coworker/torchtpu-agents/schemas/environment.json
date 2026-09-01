@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["remote_host", "ssh_user"],
+  "properties": {
+    "remote_host": { "type": "string" },
+    "ssh_user": { "type": "string" }
+  }
+}

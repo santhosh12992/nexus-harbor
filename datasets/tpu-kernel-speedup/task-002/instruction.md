@@ -20,4 +20,4 @@ You MUST use an iterative optimization loop:
 3. **Target Constraints**:
    - **Mathematical Accuracy**: Maximum absolute difference <= 1e-2 against `baseline_kernel.py`.
    - **Speedup Target**: Achieve at least 1.5x hardware speedup.
-4. Conclude only after verifying your final speedup with `python3 /workspace/profile_kernel.py`.
+4. **Conclusion**: When you have verified your final speedup with `python3 /workspace/profile_kernel.py`, conclude your response by printing 'Optimization complete. Final kernel is written to optimized_kernel.py' and stop making further tool calls.

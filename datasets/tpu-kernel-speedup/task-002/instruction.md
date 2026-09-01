@@ -8,6 +8,9 @@ Your solution must be written to `optimized_kernel.py` and implement the `run_ke
 $$\text{RMSNorm}(X, W) = \frac{X}{\sqrt{\frac{1}{D} \sum_{i=1}^D X_i^2 + \epsilon}} \odot W$$
 where $X \in \mathbb{R}^{B \times S \times D}$ is the input activation tensor, $W \in \mathbb{R}^D$ is the learnable weight vector, and $\epsilon=10^{-6}$.
 
+## Mandatory Requirement
+You MUST create and write your solution to `/workspace/optimized_kernel.py` and run `python3 /workspace/profile_kernel.py` to evaluate performance. Do NOT stop until `/workspace/optimized_kernel.py` is written and verified.
+
 ## Multi-Iteration Self-Refinement Protocol
 You have access to a hardware profiling feedback tool: `python3 /workspace/profile_kernel.py`.
 

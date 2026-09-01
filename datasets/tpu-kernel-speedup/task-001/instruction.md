@@ -4,6 +4,9 @@
 Optimize the reference attention kernel provided in `baseline_kernel.py`.
 Your solution must be written to `optimized_kernel.py` and implement the `run_kernel(Q, K, V)` function.
 
+## Mandatory Requirement
+You MUST create and write your solution to `/workspace/optimized_kernel.py` and run `python3 /workspace/profile_kernel.py` to evaluate performance. Do NOT stop until `/workspace/optimized_kernel.py` is written and verified.
+
 ## Multi-Iteration Self-Refinement Protocol
 You have access to a hardware profiling feedback tool: `python3 /workspace/profile_kernel.py`.
 
